@@ -6,7 +6,8 @@ async function main() {
   await prisma.user.createMany({
     data: {
       name: "Diego Martins"
-    }
+    },
+    skipDuplicates: true
   })
 }
 
